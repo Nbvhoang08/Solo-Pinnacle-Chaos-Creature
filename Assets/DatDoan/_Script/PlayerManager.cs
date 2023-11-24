@@ -22,10 +22,10 @@ public class PlayerManager : MonoBehaviour
         imageComponent.sprite = _character[_index].GetComponent<SpriteRenderer>().sprite;
         // _showImageChactor.GetComponent<Image>().sprite = _character[_index].GetComponent<SpriteRenderer>().sprite;
         _characterSelected.GetComponent<SpriteRenderer>().sprite = _character[_index].GetComponent<SpriteRenderer>().sprite;
-        _characterSelected.GetComponent<TempInfoCharactor>()._level = _character[_index].GetComponent<TempInfoCharactor>()._level;
-        _characterSelected.GetComponent<TempInfoCharactor>()._hp = _character[_index].GetComponent<TempInfoCharactor>()._hp;
-        _characterSelected.GetComponent<TempInfoCharactor>()._damage = _character[_index].GetComponent<TempInfoCharactor>()._damage;
-        _characterSelected.GetComponent<TempInfoCharactor>()._speed = _character[_index].GetComponent<TempInfoCharactor>()._speed;
+        _characterSelected.GetComponent<Player>()._level = _character[_index].GetComponent<Player>()._level;
+        _characterSelected.GetComponent<Player>()._hp = _character[_index].GetComponent<Player>()._hp;
+        _characterSelected.GetComponent<Player>()._damage = _character[_index].GetComponent<Player>()._damage;
+        _characterSelected.GetComponent<Player>()._speed = _character[_index].GetComponent<Player>()._speed;
     }
 
     public void Play()

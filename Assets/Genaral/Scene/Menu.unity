@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6920dff816cdb444891f1b080fa3940d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tempInfoCharactor: {fileID: 7443423445532873413, guid: c90c08173359a86458fca6bbc25edad3, type: 3}
+  _selectedCharactor: {fileID: 3703480266769089691, guid: d4a6e6038c101054eb8a2588f1de4220, type: 3}
 --- !u!1 &356532846
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,12 +541,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f9b12aa7e8f014d9c7ed6a311230b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterSelected: {fileID: 2410015193326594822, guid: c90c08173359a86458fca6bbc25edad3, type: 3}
+  _characterSelected: {fileID: 3703480266769089681, guid: d4a6e6038c101054eb8a2588f1de4220, type: 3}
   _showImageChactor: {fileID: 666673794}
   _character:
-  - {fileID: 5328430579935987051, guid: bdb9975d051fe734aa8bad1742304bc9, type: 3}
-  - {fileID: 5041176106900311687, guid: 58f056103f072ec488692e2066c0f9cb, type: 3}
-  - {fileID: 5535901574807535094, guid: f5a5c64f4d0cb8344ba01cb0579e1481, type: 3}
+  - {fileID: 4604252300082907138, guid: 373e806a65475fb49b80850a437f058a, type: 3}
+  - {fileID: 4604252300082907138, guid: 1ba306b047aee7f4899109908692d9b3, type: 3}
+  - {fileID: 4604252300082907138, guid: 1559ad453e960a24499b7a56f9658dac, type: 3}
 --- !u!1 &431244169
 GameObject:
   m_ObjectHideFlags: 0
