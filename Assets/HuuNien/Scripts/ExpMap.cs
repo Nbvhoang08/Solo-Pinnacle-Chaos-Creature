@@ -16,7 +16,7 @@ public class ExpMap : MonoBehaviour
 
     private void makeExp()
     {
-        for (int i=0;i<50;i++)
+        for (int i=0;i<200;i++)
         {
             Vector3 x = new Vector3(
                 Random.Range(-sizeMap_x, sizeMap_x),

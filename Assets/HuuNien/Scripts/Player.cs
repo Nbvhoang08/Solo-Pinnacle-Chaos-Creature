@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 500;
     [SerializeField] private Slider slider_EXP;
     [SerializeField] private Text txt_level;
+    [SerializeField] private GameObject ChooseSkill;
     private int level;
     private float horizontal, vertical;
     private void Awake()
@@ -47,6 +48,8 @@ public class Player : MonoBehaviour
     {
         if(slider_EXP.value >= slider_EXP.maxValue)
         {
+            ChooseSkill.SetActive(true);
+            ChooseSkill.GetComponent<ControllerSkillPlayer>().instanSkill();
             level++;
             txt_level.text = "LV" + level;
             slider_EXP.value = 0;
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "exp")
         {
-            slider_EXP.value++;
+            slider_EXP.value+=2;
             Destroy(collision.gameObject);
         }
     }
