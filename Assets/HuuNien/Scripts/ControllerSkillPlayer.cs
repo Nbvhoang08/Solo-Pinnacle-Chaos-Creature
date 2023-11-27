@@ -27,6 +27,9 @@ public class ControllerSkillPlayer : MonoBehaviour
         skill3 = Random.Range(0, skills.Length);
         while(skill1 == skill2) skill2 = Random.Range(0, skills.Length);
         while (skill2 == skill3 || skill3 == skill1) skill3 = Random.Range(0, skills.Length);
+        Debug.Log(skill1);
+        Debug.Log(skill2); 
+        Debug.Log(skill3);
         sk1 = Instantiate(skills[skill1], trans_Skill[0].transform.position, Quaternion.identity, trans_Skill[0].transform);
         sk1.transform.Find("Star").gameObject.GetComponent<Text>().text = starSkill[skill1].ToString() + " Star";
         sk2 = Instantiate(skills[skill2], trans_Skill[1].transform.position, Quaternion.identity, trans_Skill[1].transform);
