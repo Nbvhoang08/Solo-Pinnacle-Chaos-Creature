@@ -11,14 +11,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - bullet
   - Water
   - UI
   - Enemies
-  - 
-  - 
-  - 
-  - 
+  - fire
+  - zone
+  - sword
+  - flyBall
   - 
   - 
   - 
