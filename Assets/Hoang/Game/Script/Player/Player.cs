@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,6 +43,5 @@ public class Player : MonoBehaviour
     public void GainExp(float expAmount)
     {
         playerExp += expAmount;
-        Debug.Log("Player Exp: " + playerExp);
     }
 }
