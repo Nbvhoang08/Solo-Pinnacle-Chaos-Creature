@@ -11,7 +11,16 @@ public class bullet : MonoBehaviour
     public float damage;
     void Start()
     {
+<<<<<<< Updated upstream
         Destroy(this.gameObject, time);
+=======
+        if(this.gameObject.layer != 8 && this.gameObject.layer != 9 && this.gameObject.layer != 10) {
+            Destroy(this.gameObject, time);
+          
+        }
+
+        player = GameObject.FindWithTag("Player");
+>>>>>>> Stashed changes
         b_rb = GetComponent<Rigidbody2D>();
         m_gc = FindAnyObjectByType<GameController>();
     }

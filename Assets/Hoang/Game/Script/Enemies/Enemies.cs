@@ -9,10 +9,30 @@ public class Enemies : MonoBehaviour
     public float damage;
     public bullet bullet;
     public GameObject expPrefab;
+<<<<<<< Updated upstream
     void Start()
     {
         GameObject bullet = GameObject.FindGameObjectWithTag("bullet");
 
+=======
+    public float duration = 5f;
+    public float ticksPerSecond;
+    public bool VarZone; // kiểm tra va chạm vs zone
+    public SpawnEnemies spawnE;
+
+    void Start()
+    {
+        GameObject SpawnE = GameObject.FindWithTag("GameController");
+
+        if (SpawnE != null)
+        {
+            // Lấy component GameController từ đối tượng GameController
+            spawnE = SpawnE.GetComponent<SpawnEnemies>();
+
+            // Kiểm tra xem có component GameController hay không
+            
+        }
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -30,6 +50,7 @@ public class Enemies : MonoBehaviour
 
         // Hủy đối tượng enemy
         Destroy(gameObject);
+        spawnE.CountEnemmies--;
     }
 
     void SpawnExp()
