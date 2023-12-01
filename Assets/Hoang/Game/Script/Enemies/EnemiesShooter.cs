@@ -44,6 +44,9 @@ public class EnemiesShooter : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
+<<<<<<< HEAD
         
+=======
+>>>>>>> main
     }
 }

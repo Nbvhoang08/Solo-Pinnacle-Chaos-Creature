@@ -170,7 +170,10 @@ MonoBehaviour:
   duration: 5
   ticksPerSecond: 0
   VarZone: 0
+<<<<<<< HEAD
   spawnE: {fileID: 0}
+=======
+>>>>>>> main
 --- !u!114 &-4417901235214138145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,4 +189,8 @@ MonoBehaviour:
   bullet: {fileID: 4268987810265550574, guid: faaedc4eef77f084788e79c63d9151ef, type: 3}
   shootTimer: 1
   min: 1
+<<<<<<< HEAD
   max: 8
+=======
+  max: 4
+>>>>>>> main

@@ -17,9 +17,15 @@ public class BraveStab : MonoBehaviour
     }
 
     // Update is called once per frame
+<<<<<<< HEAD
     void Update()
     {
         TimeStab -= Time.deltaTime;
+=======
+    void FixedUpdate()
+    {
+        TimeStab -= Time.fixedDeltaTime;
+>>>>>>> main
         if (TimeStab < 0)
         {
             Stab();

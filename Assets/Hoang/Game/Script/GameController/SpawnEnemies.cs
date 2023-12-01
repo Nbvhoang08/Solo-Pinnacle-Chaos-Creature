@@ -8,12 +8,17 @@ using UnityEngine.UI;
 public class SpawnEnemies : MonoBehaviour
 {
     // Start is called before the first frame update
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     public GameObject Enemies;
 =======
     [SerializeField] public GameObject[] Enemies;// danh sách số loại quái
     private GameObject enemies;
 >>>>>>> Stashed changes
+=======
+    [SerializeField] public GameObject[] Enemies;
+    private GameObject enemies;
+>>>>>>> main
     public GameObject player;
     public float SpawnTime;
     float m_SpawnTime;
@@ -47,6 +52,7 @@ public class SpawnEnemies : MonoBehaviour
             m_SpawnTime = SpawnTime;
         }
     }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
@@ -97,6 +103,14 @@ public class SpawnEnemies : MonoBehaviour
         return randomEnemy;
     }
 >>>>>>> Stashed changes
+=======
+    GameObject GetRandomEnemies()
+    {
+        int randomIndex = Random.Range(0, Enemies.Length);
+        GameObject randomEnemy = Enemies[randomIndex];
+        return randomEnemy;
+    }
+>>>>>>> main
     public void spawnEnemies()
     {
         float randXPos = UnityEngine.Random.Range(player.transform.position.x - 12f, player.transform.position.x + 12f);
@@ -109,11 +123,19 @@ public class SpawnEnemies : MonoBehaviour
 
         if (player)
         {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             Instantiate(Enemies, spawnPos, Quaternion.identity);
             Instantiate(Enemies, spawnPos1, Quaternion.identity);
             Instantiate(Enemies, spawnPos2, Quaternion.identity);
             Instantiate(Enemies, spawnPos3, Quaternion.identity);
+=======
+            enemies =GetRandomEnemies();
+            Instantiate(enemies, spawnPos, Quaternion.identity);
+            Instantiate(enemies, spawnPos1, Quaternion.identity);
+            Instantiate(enemies, spawnPos2, Quaternion.identity);
+            Instantiate(enemies, spawnPos3, Quaternion.identity);
+>>>>>>> main
         }
 =======
             if(CountEnemmies <= maxEnemies)

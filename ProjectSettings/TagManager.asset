@@ -4,21 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemies
-  - bullet
   - exp
+  - bullet
+  - enemies
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - bullet
   - Water
   - UI
-  - enemies
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - fire
+  - zone
+  - sword
+  - flyBall
   - 
   - 
   - 

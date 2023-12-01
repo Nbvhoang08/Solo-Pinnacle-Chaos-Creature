@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 4268987810265550568}
   - component: {fileID: 4268987810265550575}
   - component: {fileID: 1455321150531989103}
+<<<<<<< HEAD
   - component: {fileID: 8344680807050337323}
+=======
+>>>>>>> main
   m_Layer: 0
   m_Name: enemiesbullet
   m_TagString: Untagged
@@ -98,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c360a3bd9d8724fa6a9fcb7162fe01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 40
   time: 3
 --- !u!50 &8344680807050337323
@@ -121,3 +125,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+=======
+  speed: 5
+  time: 3
+>>>>>>> main

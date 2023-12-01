@@ -196,12 +196,20 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 6145e879da9edb542a16cbf13b0c1d44, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 4c9caafac71c2424c863c73b8dfc75ec, type: 3}
+>>>>>>> main
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< HEAD
   m_Size: {x: 3.2, y: 4}
+=======
+  m_Size: {x: 1, y: 1}
+>>>>>>> main
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -245,8 +253,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
     oldSize: {x: 1.6, y: 2}
     newSize: {x: 3.2, y: 4}
+=======
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1, y: 1}
+>>>>>>> main
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -281,8 +294,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerExp: 0
   _level: 1
+<<<<<<< HEAD
   _hp: 100
   _damage: 10
+=======
+  _hp: 80
+  _damage: 15
+>>>>>>> main
   _speed: 200
   exp: {fileID: 7850209815688748146, guid: 351a9e40e53ce1541b97d37ce1aa473e, type: 3}
   _slider: {fileID: 0}
