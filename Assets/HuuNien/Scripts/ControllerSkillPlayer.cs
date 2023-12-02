@@ -26,20 +26,19 @@ public class ControllerSkillPlayer : MonoBehaviour
     [SerializeField] private GameObject[] skillRed;
     [SerializeField] private GameObject[] skillBlue;
     [SerializeField] private GameObject[] trans_Skill; // list save position of 3 skill
-    private List<int> starSkills = new List<int>(); // save number star of skills
-    private List<GameObject> skills; // skillBlue + skillRed
-    private HashSet<GameObject> ChooseRed = new HashSet<GameObject>(); // set skill red was choose
-    private HashSet<GameObject> ChooseBlue = new HashSet<GameObject>();  // set skill blue was choose
+    private List<Skill> skills; // skillBlue + skillRed
+    private int numRedChoose = 0;
+    private int numBlueChoose = 0;
     List<int> indexChoose;
     void Start()
     {
-        skills = new List<GameObject>();
+        skills = new List<Skill>();
         this.gameObject.SetActive(false);
+
         for(int i = 0; i< skillRed.Length; i++)
-        {
-            skills.Add(skillRed[i]);
-        }
+            skills.Add(new Skill(i, skillRed[i].gameObject.name, skillRed[i], 0, "red"));
         for(int i = 0;i< skillBlue.Length; i++)
+<<<<<<< Updated upstream
         {
             skills.Add(skillBlue[i]);
         }
@@ -48,6 +47,9 @@ public class ControllerSkillPlayer : MonoBehaviour
             starSkills.Add(0);
 >>>>>>> main
         }
+=======
+            skills.Add(new Skill(skillRed.Length + i, skillBlue[i].gameObject.name, skillBlue[i], 0, "blue"));
+>>>>>>> Stashed changes
     }
 
     public void instanSkill()
@@ -94,12 +96,12 @@ public class ControllerSkillPlayer : MonoBehaviour
             indexChoose.Add(o); // lưu lại index random được
 
             GameObject tmp = Instantiate(
-                skills[o], 
+                skills[o].gameOJ, 
                 trans_Skill[indexChoose.Count-1].transform.position, 
                 Quaternion.identity, 
                 trans_Skill[indexChoose.Count - 1].transform);
 
-            tmp.transform.Find("Star").gameObject.GetComponent<Text>().text = starSkills[o].ToString() + " Star";
+            tmp.transform.Find("Star").gameObject.GetComponent<Text>().text = skills[o].Star + " Star";
         }
         Time.timeScale = 0;
     }
@@ -116,45 +118,44 @@ public class ControllerSkillPlayer : MonoBehaviour
     public void onClickChooseSkill(int i)
     {
         Time.timeScale = 1; // tiếp tục game
-        starSkills[indexChoose[i]]++; // tăng sao cho skill được chọn
-        if (indexChoose[i] < skillRed.Length)  // nếu skill được chọn là skill red thì thêm vào hàng red
+
+        if (skills[indexChoose[i]].Color == "red" && skills[indexChoose[i]].Star == 0)  // nếu skill được chọn là skill red thì tang chooseRed
+            numRedChoose++;
+        else if (skills[indexChoose[i]].Color == "blue" && skills[indexChoose[i]].Star == 0) // ngược lại nếu là skill blue
+            numBlueChoose++;
+
+        skills[indexChoose[i]].Star++; // tăng sao cho skill được chọn
+
+        if (numRedChoose == 4) // khi đã chọn 4 skill red, xóa các skill thừa ko chọn
         {
-            ChooseRed.Add(skills[indexChoose[i]]);
+            // Duyệt trong các skills, nếu skills tại k là skill red và số sao vẫn còn là 0 thì bỏ
+            for (int k = 0; k < skills.Count; k++)
+                if (skills[k].Color == "red" && skills[k].Star == 0)
+                {
+                    skills.Remove(skills[k]);
+                    k--;
+                }
+            numRedChoose++; // tăng lên 5, lần sau không lần thực hiện nữa
         }
-        else // ngược lại nếu là skill blue
+        if (numBlueChoose == 4)
         {
-            ChooseBlue.Add(skills[indexChoose[i]]);
+            for (int k = 0; k < skills.Count; k++)
+                if (skills[k].Color == "blue" && skills[k].Star == 0)
+                {
+                    skills.Remove(skills[k]);
+                    k--;
+                }
+            numBlueChoose++;
         }
 
-        if (ChooseRed.Count == 4) // khi đã chọn 4 skill red, xóa các skill thừa ko chọn
-        {
-            foreach (var a in skillRed)
-                if (!ChooseRed.Contains(a))
-                {
-                    starSkills.RemoveAt(skills.IndexOf(a)); // xóa trong danh sách star
-                    skills.Remove(a); // xóa trong ds skill
-                }
-            ChooseRed.Add(null); // thêm null vào để Count của ChooseRed lên 5, lần sau không lần thực hiện nữa
-        }
-        // tương tự skill red, thực hiện trên skill blue
-        if (ChooseBlue.Count == 4)
-        {
-            foreach (var o in ChooseBlue) Debug.Log(o);
-            foreach (var a in skillBlue)
-                if (!ChooseBlue.Contains(a))
-                {
-                    starSkills.RemoveAt(skills.IndexOf(a));
-                    skills.Remove(a);
-                }
-            ChooseBlue.Add(null);
-        }
-            
         // xóa 3 skill vừa hiện
         foreach (var a in trans_Skill)
-        {
             Destroy(a.gameObject.transform.GetChild(0).gameObject);
+<<<<<<< Updated upstream
         }
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
         this.gameObject.SetActive(false);
     }
 }
