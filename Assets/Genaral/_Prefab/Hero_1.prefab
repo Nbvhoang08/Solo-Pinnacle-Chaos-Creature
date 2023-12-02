@@ -78,12 +78,20 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+  m_Sprite: {fileID: 21300000, guid: 6145e879da9edb542a16cbf13b0c1d44, type: 3}
+=======
   m_Sprite: {fileID: 21300000, guid: da6ea23ef94fe8441b97597fdb6a20e4, type: 3}
+>>>>>>> main
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< HEAD
+  m_Size: {x: 3.2, y: 4}
+=======
   m_Size: {x: 1, y: 1}
+>>>>>>> main
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -127,8 +135,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+    oldSize: {x: 1.6, y: 2}
+    newSize: {x: 3.2, y: 4}
+=======
     oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 1}
+>>>>>>> main
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -167,6 +180,11 @@ MonoBehaviour:
   _damage: 10
   _speed: 200
   exp: {fileID: 7850209815688748146, guid: 351a9e40e53ce1541b97d37ce1aa473e, type: 3}
+<<<<<<< HEAD
+  _slider: {fileID: 0}
+  ControlSkill: {fileID: 0}
+=======
+>>>>>>> main
 --- !u!1 &4604252300904297131
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +197,10 @@ GameObject:
   - component: {fileID: 4604252300904297108}
   - component: {fileID: 4604252300904297109}
   - component: {fileID: 4604252300904297110}
+<<<<<<< HEAD
+  - component: {fileID: 4846840048113778773}
+=======
+>>>>>>> main
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -275,7 +297,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4604252300904297131}
+<<<<<<< HEAD
+  m_Enabled: 0
+=======
   m_Enabled: 1
+>>>>>>> main
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80d30a27ee8bce144b9820386c9ffaf5, type: 3}
   m_Name: 
@@ -284,3 +310,22 @@ MonoBehaviour:
   timer: 0.5
   timebtwFire: 0
   force: 20
+<<<<<<< HEAD
+--- !u!114 &4846840048113778773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604252300904297131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980f9d0f27a435d4cb70fe842c35767c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeStab: 0
+  timer: 2
+  wp: {fileID: 4604252300904297109}
+  braveStab: {fileID: 2095136273969765648, guid: 0f4f0ce4f85370b4dbfcf2c5fa0e5527, type: 3}
+=======
+>>>>>>> main

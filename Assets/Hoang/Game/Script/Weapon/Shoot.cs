@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour
     public float timer ;
     public float timebtwFire;
     public float force;
-    WEAPON wp;
+    protected WEAPON wp;
     void Start()
     {
         timebtwFire = timer;
@@ -31,7 +31,7 @@ public class Shoot : MonoBehaviour
         
 
     }
-    void fireBullet()
+    private void fireBullet()
     {
         timebtwFire = timer;
 

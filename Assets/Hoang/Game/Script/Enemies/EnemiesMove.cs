@@ -25,6 +25,7 @@ public class EnemiesMove : MonoBehaviour
             // Di chuyển kẻ thù theo hướng tính toán được
             transform.position += directionToPlayer * moveSpeed * Time.fixedDeltaTime;
         }
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
     public void followplayer()
     {
