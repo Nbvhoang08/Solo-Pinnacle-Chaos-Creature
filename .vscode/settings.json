@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PinnacleSolo-CreatureChaos.sln"
+    "dotnet.defaultSolution": "Solo-Pinnacle-Chaos-Creature-.sln",
+    "dotnet.preferCSharpExtension": true
 }
